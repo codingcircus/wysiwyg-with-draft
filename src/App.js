@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { EditorState, RichUtils } from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
+import { EditorState, RichUtils } from 'draft-js';
 import createMarkdownShortcutsPlugin from 'draft-js-markdown-shortcuts-plugin';
+import createEmojiPlugin from 'draft-js-emoji-plugin';
+import 'draft-js-emoji-plugin/lib/plugin.css';
 import logo from './logo.svg';
 import './App.css';
 
+const emojiPlugin = createEmojiPlugin();
+const { EmojiSuggestions } = emojiPlugin;
+
 const plugins = [
-  createMarkdownShortcutsPlugin(),
+  emojiPlugin,
 ];
 
 class App extends Component {
@@ -52,6 +57,7 @@ class App extends Component {
             plugins={plugins}
             ref={(element) => { this.editor = element; }}
             />
+          <EmojiSuggestions />
         </div>
       </div>
     );
