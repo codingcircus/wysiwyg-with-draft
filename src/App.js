@@ -25,10 +25,9 @@ class App extends Component {
         </div>
         <div className="App-content">
           <Editor
-            className="editor"
             editorState={this.state.editorState}
             onChange={this.onChange}
-          />
+            />
         </div>
       </div>
     );
