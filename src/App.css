@@ -9,23 +9,38 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
   padding: 20px;
   color: white;
+}
+
+h2 {
+  margin: 0;
 }
 
 .App-content {
   background: #f9f9f9;
   min-height: calc(100vh - 150px);
-  padding: 21px;
+  padding: 20px;
 }
 
-.editor {
+.DraftEditor-root {
+  text-align: left;
+  display: flex;
   max-width: 920px;
-  background: #fff;
+  min-height: calc(100vh - 150px - 40px);
   margin: 0 auto;
-  height: 100%;
+  background: #fff;
   box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+
+.DraftEditor-editorContainer {
+  display: flex;
+  flex: 1 0 100%;
+}
+
+.public-DraftEditor-content {
+  padding: 20px;
+  flex: 1 0 100%;
 }
 
 @keyframes App-logo-spin {

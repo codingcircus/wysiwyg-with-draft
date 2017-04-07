@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
-import { EditorState } from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
+import { EditorState, RichUtils } from 'draft-js';
+import createMarkdownShortcutsPlugin from 'draft-js-markdown-shortcuts-plugin';
+import createEmojiPlugin from 'draft-js-emoji-plugin';
+import 'draft-js-emoji-plugin/lib/plugin.css';
 import logo from './logo.svg';
 import './App.css';
+
+const emojiPlugin = createEmojiPlugin();
+const { EmojiSuggestions } = emojiPlugin;
+
+const plugins = [
+  emojiPlugin,
+];
 
 class App extends Component {
 
@@ -16,6 +26,22 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    const { editor } = this;
+    if (editor) {
+      setTimeout(editor.focus.bind(editor), 1000);
+    }
+  }
+
+  handleKeyCommand = (command) => {
+    const newState = RichUtils.handleKeyCommand(this.state.editorState, command);
+    if (newState) {
+      this.onChange(newState);
+      return 'handled';
+    }
+    return 'not-handled';
+  }
+
   render() {
     return (
       <div className="App">
@@ -25,10 +51,13 @@ class App extends Component {
         </div>
         <div className="App-content">
           <Editor
-            className="editor"
             editorState={this.state.editorState}
+            handleKeyCommand={this.handleKeyCommand}
             onChange={this.onChange}
-          />
+            plugins={plugins}
+            ref={(element) => { this.editor = element; }}
+            />
+          <EmojiSuggestions />
         </div>
       </div>
     );
