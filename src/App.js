@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { EditorState, RichUtils } from 'draft-js';
 import Editor from 'draft-js-plugins-editor';
+import createMarkdownShortcutsPlugin from 'draft-js-markdown-shortcuts-plugin';
 import logo from './logo.svg';
 import './App.css';
+
+const plugins = [
+  createMarkdownShortcutsPlugin(),
+];
 
 class App extends Component {
 
@@ -44,6 +49,7 @@ class App extends Component {
             editorState={this.state.editorState}
             handleKeyCommand={this.handleKeyCommand}
             onChange={this.onChange}
+            plugins={plugins}
             ref={(element) => { this.editor = element; }}
             />
         </div>

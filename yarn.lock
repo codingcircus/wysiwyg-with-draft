@@ -1618,6 +1618,21 @@ dotenv@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-2.0.0.tgz#bd759c357aaa70365e01c96b7b0bec08a6e0d949"
 
+draft-js-checkable-list-item@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/draft-js-checkable-list-item/-/draft-js-checkable-list-item-2.0.2.tgz#e510f9a10459d9292723dc8085f6b3cc00abe826"
+
+draft-js-markdown-shortcuts-plugin@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/draft-js-markdown-shortcuts-plugin/-/draft-js-markdown-shortcuts-plugin-0.0.6.tgz#6baa2a063f04a477ceec2596aeed322d07a60f46"
+  dependencies:
+    decorate-component-with-props "^1.0.2"
+    draft-js "^0.9.1"
+    draft-js-checkable-list-item "^2.0.2"
+    immutable "^3.8.1"
+    react "^15.4.1"
+    react-dom "^15.4.1"
+
 draft-js-plugins-editor@^2.0.0-beta1:
   version "2.0.0-beta1"
   resolved "https://registry.yarnpkg.com/draft-js-plugins-editor/-/draft-js-plugins-editor-2.0.0-beta1.tgz#184e0c3579bffeb4b18b8b65a172ffdfce110d04"
@@ -1635,6 +1650,14 @@ draft-js@>=0.7.0, draft-js@^0.10.0:
   resolved "https://registry.yarnpkg.com/draft-js/-/draft-js-0.10.0.tgz#29d16191012b932fdab28a9b37ec1538f421abf6"
   dependencies:
     fbjs "^0.8.7"
+    immutable "~3.7.4"
+    object-assign "^4.1.0"
+
+draft-js@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/draft-js/-/draft-js-0.9.1.tgz#940a51a0ad1fede0411676b6404f4050495f54f9"
+  dependencies:
+    fbjs "^0.8.3"
     immutable "~3.7.4"
     object-assign "^4.1.0"
 
@@ -2059,7 +2082,7 @@ fb-watchman@^1.8.0, fb-watchman@^1.9.0:
   dependencies:
     bser "1.0.2"
 
-fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.7:
+fbjs@^0.8.1, fbjs@^0.8.3, fbjs@^0.8.4, fbjs@^0.8.7:
   version "0.8.12"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.12.tgz#10b5d92f76d45575fd63a217d4ea02bea2f8ed04"
   dependencies:
@@ -2499,7 +2522,7 @@ ignore@^3.2.0:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.2.7.tgz#4810ca5f1d8eca5595213a34b94f2eb4ed926bbd"
 
-immutable@>=3.8.1:
+immutable@>=3.8.1, immutable@^3.8.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
 
@@ -4172,7 +4195,7 @@ react-dev-utils@^0.5.2:
     sockjs-client "1.0.1"
     strip-ansi "3.0.1"
 
-react-dom@>=15.1.0, react-dom@^15.4.2:
+react-dom@>=15.1.0, react-dom@^15.4.1, react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
@@ -4225,7 +4248,7 @@ react-scripts@0.9.5:
   optionalDependencies:
     fsevents "1.0.17"
 
-react@>=15.1.0, react@^15.4.2:
+react@>=15.1.0, react@^15.4.1, react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:
