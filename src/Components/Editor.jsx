@@ -2,11 +2,10 @@ import React, { Component } from "react";
 import DraftEditor from "draft-js-plugins-editor";
 import { EditorState, RichUtils } from "draft-js";
 import createEmojiPlugin from "draft-js-emoji-plugin";
+import createLinkifyPlugin from 'draft-js-linkify-plugin';
 import createInlineToolbarPlugin, {
   Separator
 } from "draft-js-inline-toolbar-plugin";
-import "draft-js-emoji-plugin/lib/plugin.css";
-import "draft-js-inline-toolbar-plugin/lib/plugin.css";
 import {
   ItalicButton,
   BoldButton,
@@ -19,10 +18,14 @@ import {
   BlockquoteButton,
   CodeBlockButton
 } from "draft-js-buttons";
+import "draft-js-emoji-plugin/lib/plugin.css";
+import "draft-js-inline-toolbar-plugin/lib/plugin.css";
+import 'draft-js-linkify-plugin/lib/plugin.css';
 import '../css/Editor.css';
 
 // Create Draft JS Plugins
 const emojiPlugin = createEmojiPlugin();
+const linkifyPlugin = createLinkifyPlugin();
 const inlineToolbarPlugin = createInlineToolbarPlugin({
   structure: [
     HeadlineOneButton,
@@ -42,6 +45,7 @@ const inlineToolbarPlugin = createInlineToolbarPlugin({
 const plugins = [
   emojiPlugin,
   inlineToolbarPlugin,
+  linkifyPlugin,
 ];
 
 // Get Components from DraftJS Plugins
