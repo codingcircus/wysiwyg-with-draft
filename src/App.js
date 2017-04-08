@@ -55,6 +55,10 @@ class App extends Component {
     this.setState({
       editorState,
     });
+  };
+
+  focus = () => {
+    this.editor.focus();
   }
 
   componentDidMount() {
@@ -80,7 +84,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Editor Test</h2>
         </div>
-        <div className="App-content">
+        <div className="App-content" onClick={this.focus}>
           <Editor
             editorState={this.state.editorState}
             handleKeyCommand={this.handleKeyCommand}
@@ -89,6 +93,7 @@ class App extends Component {
             ref={(element) => { this.editor = element; }}
             />
           <EmojiSuggestions />
+          <InlineToolbar />
         </div>
       </div>
     );
