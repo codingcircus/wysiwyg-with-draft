@@ -1,0 +1,89 @@
+.App-content {
+  background: #f9f9f9;
+  min-height: calc(100vh - 150px);
+  padding: 20px;
+}
+
+.DraftEditor-root {
+  text-align: left;
+  display: flex;
+  max-width: 920px;
+  min-height: calc(100vh - 150px - 40px);
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+}
+
+.DraftEditor-editorContainer {
+  display: flex;
+  flex: 1 0 100%;
+}
+
+.public-DraftEditor-content {
+  padding: 40px 20px;
+  flex: 1 0 100%;
+}
+
+.public-DraftEditor-content {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.draftEditorUnstyled,
+.public-DraftStyleDefault-ul,
+.public-DraftStyleDefault-ol {
+  margin-bottom: 14px;
+}
+
+.public-DraftStyleDefault-ul,
+.public-DraftStyleDefault-ol {
+  margin-left: 0;
+  padding-left: 21px;
+}
+
+.draftEditorH1 {
+  margin: 0 0 21px 0;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.draftEditorH2 {
+  margin: 0 0 14px 0;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+.draftEditorH1:not(:first-child),
+.draftEditorH2:not(:first-child),
+.draftEditorH3:not(:first-child) {
+  margin-top: 35px;
+}
+
+.draftEditorH3 {
+  margin: 0 0 14px 0;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.draftEditorBlockquote {
+  margin: 0 0 14px 0;
+  padding: 7px 0 7px 14px;
+  font-size: 21px;
+  line-height: 28px;
+  font-style: italic;
+  border-left: solid 3px orange;
+}
+
+.public-DraftEditor-content pre:not(.public-DraftStyleDefault-pre) {
+  display: block;
+  margin: 0;
+}
+
+.public-DraftStyleDefault-pre {
+  display: block;
+  background: #fbfbfb;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 0 14px 0;
+  padding: 14px;
+}
