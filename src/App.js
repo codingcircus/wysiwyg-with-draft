@@ -1,17 +1,48 @@
 import React, { Component } from 'react';
 import Editor from 'draft-js-plugins-editor';
 import { EditorState, RichUtils } from 'draft-js';
-import createMarkdownShortcutsPlugin from 'draft-js-markdown-shortcuts-plugin';
 import createEmojiPlugin from 'draft-js-emoji-plugin';
+import createInlineToolbarPlugin, { Separator } from 'draft-js-inline-toolbar-plugin';
 import 'draft-js-emoji-plugin/lib/plugin.css';
+import 'draft-js-inline-toolbar-plugin/lib/plugin.css';
+import {
+  ItalicButton,
+  BoldButton,
+  CodeButton,
+  HeadlineOneButton,
+  HeadlineTwoButton,
+  HeadlineThreeButton,
+  UnorderedListButton,
+  OrderedListButton,
+  BlockquoteButton,
+  CodeBlockButton,
+} from 'draft-js-buttons';
 import logo from './logo.svg';
 import './App.css';
 
 const emojiPlugin = createEmojiPlugin();
 const { EmojiSuggestions } = emojiPlugin;
+const inlineToolbarPlugin = createInlineToolbarPlugin({
+  structure: [
+    HeadlineOneButton,
+    HeadlineTwoButton,
+    HeadlineThreeButton,
+    Separator,
+    BoldButton,
+    ItalicButton,
+    UnorderedListButton,
+    OrderedListButton,
+    CodeButton,
+    Separator,
+    BlockquoteButton,
+    CodeBlockButton,
+  ]
+});
+const { InlineToolbar } = inlineToolbarPlugin;
 
 const plugins = [
   emojiPlugin,
+  inlineToolbarPlugin,
 ];
 
 class App extends Component {
