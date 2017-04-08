@@ -1,35 +1,17 @@
 import React, { Component } from 'react';
-import { EditorState } from 'draft-js';
-import Editor from 'draft-js-plugins-editor';
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import Editor from './Components/Editor';
 
 class App extends Component {
-
-  state = {
-    editorState: EditorState.createEmpty(),
-  };
-
-  onChange = (editorState) => {
-    this.setState({
-      editorState,
-    });
-  }
 
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Editor Test</h2>
+          <h1>Editor Test</h1>
         </div>
-        <div className="App-content">
-          <Editor
-            className="editor"
-            editorState={this.state.editorState}
-            onChange={this.onChange}
-          />
-        </div>
+        <Editor />
       </div>
     );
   }

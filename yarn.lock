@@ -1618,19 +1618,63 @@ dotenv@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-2.0.0.tgz#bd759c357aaa70365e01c96b7b0bec08a6e0d949"
 
-draft-js-plugins-editor@^2.0.0-beta1:
+draft-js-buttons@^2.0.0-beta10:
+  version "2.0.0-beta9"
+  resolved "https://registry.yarnpkg.com/draft-js-buttons/-/draft-js-buttons-2.0.0-beta9.tgz#1e46fc3de2a6b75a45bb13b5f7e924a1b7bd29f3"
+  dependencies:
+    draft-js ">=0.9.1"
+    react ">=15.3.1"
+    union-class-names "^1.0.0"
+
+draft-js-emoji-plugin@beta:
+  version "2.0.0-beta10"
+  resolved "https://registry.yarnpkg.com/draft-js-emoji-plugin/-/draft-js-emoji-plugin-2.0.0-beta10.tgz#5c2aa93d5fcd359fcd9cf623615685e4a8dd91f4"
+  dependencies:
+    decorate-component-with-props "^1.0.2"
+    draft-js ">=0.9.1"
+    emojione "^2.2.6"
+    find-with-regex "^1.0.2"
+    immutable "~3.7.4"
+    lodash.keys "^4.2.0"
+    union-class-names "^1.0.0"
+
+draft-js-inline-toolbar-plugin@beta:
+  version "2.0.0-beta10"
+  resolved "https://registry.yarnpkg.com/draft-js-inline-toolbar-plugin/-/draft-js-inline-toolbar-plugin-2.0.0-beta10.tgz#2dc65146fa9acef157bf40b222ddfc49e7b84948"
+  dependencies:
+    decorate-component-with-props "^1.0.2"
+    draft-js ">=0.9.1"
+    draft-js-buttons "^2.0.0-beta10"
+    find-with-regex "^1.0.2"
+    immutable "~3.7.4"
+    union-class-names "^1.0.0"
+
+draft-js-linkify-plugin@^2.0.0-beta1:
   version "2.0.0-beta1"
-  resolved "https://registry.yarnpkg.com/draft-js-plugins-editor/-/draft-js-plugins-editor-2.0.0-beta1.tgz#184e0c3579bffeb4b18b8b65a172ffdfce110d04"
+  resolved "https://registry.yarnpkg.com/draft-js-linkify-plugin/-/draft-js-linkify-plugin-2.0.0-beta1.tgz#03098dce5744c66228f2851cd13777182ad24d61"
   dependencies:
     decorate-component-with-props "^1.0.2"
     draft-js ">=0.7.0"
-    find-with-regex "^1.0.2"
     immutable ">=3.8.1"
+    linkify-it "2.0.0"
     react ">=15.1.0"
     react-dom ">=15.1.0"
+    tlds "1.132.0"
     union-class-names "^1.0.0"
 
-draft-js@>=0.7.0, draft-js@^0.10.0:
+draft-js-plugins-editor@^2.0.0-beta10:
+  version "2.0.0-beta9"
+  resolved "https://registry.yarnpkg.com/draft-js-plugins-editor/-/draft-js-plugins-editor-2.0.0-beta9.tgz#9793b46c4765c205366055e1c7c566d955561a72"
+  dependencies:
+    decorate-component-with-props "^1.0.2"
+    draft-js ">=0.9.1"
+    find-with-regex "^1.0.2"
+    immutable ">=3.8.1"
+    react ">=15.3.1"
+    react-dom ">=15.3.1"
+    union-class-names "^1.0.0"
+
+draft-js@>=0.7.0, draft-js@>=0.9.1, draft-js@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/draft-js/-/draft-js-0.10.0.tgz#29d16191012b932fdab28a9b37ec1538f421abf6"
   dependencies:
@@ -1659,6 +1703,10 @@ electron-to-chromium@^1.1.0, electron-to-chromium@^1.2.7:
 emoji-regex@^6.1.0:
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-6.4.2.tgz#a30b6fee353d406d96cfb9fa765bdc82897eff6e"
+
+emojione@^2.2.6:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/emojione/-/emojione-2.2.7.tgz#46457cf6b9b2f8da13ae8a2e4e547de06ee15e96"
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -3150,6 +3198,12 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+linkify-it@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-2.0.0.tgz#61de35c5f22c3633189a75d3c40cd3dc96acbb94"
+  dependencies:
+    uc.micro "^1.0.1"
+
 load-json-file@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
@@ -3245,6 +3299,10 @@ lodash.keys@^3.0.0:
     lodash._getnative "^3.0.0"
     lodash.isarguments "^3.0.0"
     lodash.isarray "^3.0.0"
+
+lodash.keys@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/lodash.keys/-/lodash.keys-4.2.0.tgz#a08602ac12e4fb83f91fc1fb7a360a4d9ba35205"
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
@@ -4172,7 +4230,7 @@ react-dev-utils@^0.5.2:
     sockjs-client "1.0.1"
     strip-ansi "3.0.1"
 
-react-dom@>=15.1.0, react-dom@^15.4.2:
+react-dom@>=15.1.0, react-dom@>=15.3.1, react-dom@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"
   dependencies:
@@ -4225,7 +4283,7 @@ react-scripts@0.9.5:
   optionalDependencies:
     fsevents "1.0.17"
 
-react@>=15.1.0, react@^15.4.2:
+react@>=15.1.0, react@>=15.3.1, react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
   dependencies:
@@ -4884,6 +4942,10 @@ timers-browserify@^2.0.2:
   dependencies:
     setimmediate "^1.0.4"
 
+tlds@1.132.0:
+  version "1.132.0"
+  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.132.0.tgz#85b8edba2e664531ccf6a69989be790c16777305"
+
 tmpl@1.0.x:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
@@ -4952,6 +5014,10 @@ typedarray@^0.0.6:
 ua-parser-js@^0.7.9:
   version "0.7.12"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.12.tgz#04c81a99bdd5dc52263ea29d24c6bf8d4818a4bb"
+
+uc.micro@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.3.tgz#7ed50d5e0f9a9fb0a573379259f2a77458d50192"
 
 uglify-js@2.8.x, uglify-js@^2.6:
   version "2.8.21"
