@@ -20,7 +20,7 @@
 }
 
 .public-DraftEditor-content {
-  padding: 20px;
+  padding: 40px 20px;
   flex: 1 0 100%;
 }
 
@@ -29,8 +29,16 @@
   line-height: 21px;
 }
 
-.draftEditorUnstyled {
+.draftEditorUnstyled,
+.public-DraftStyleDefault-ul,
+.public-DraftStyleDefault-ol {
   margin-bottom: 14px;
+}
+
+.public-DraftStyleDefault-ul,
+.public-DraftStyleDefault-ol {
+  margin-left: 0;
+  padding-left: 21px;
 }
 
 .draftEditorH1 {
@@ -55,6 +63,15 @@
   margin: 0 0 14px 0;
   font-size: 16px;
   line-height: 21px;
+}
+
+.draftEditorBlockquote {
+  margin: 0 0 14px 0;
+  padding: 7px 0 7px 14px;
+  font-size: 21px;
+  line-height: 28px;
+  font-style: italic;
+  border-left: solid 3px orange;
 }
 
 .public-DraftEditor-content pre:not(.public-DraftStyleDefault-pre) {
